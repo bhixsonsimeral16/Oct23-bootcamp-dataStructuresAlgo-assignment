@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -123,6 +129,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -135,6 +142,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -610,8 +618,8 @@ TextureImporter:
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -631,8 +639,8 @@ TextureImporter:
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -652,8 +660,8 @@ TextureImporter:
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -676,37 +684,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      plants free_21: -2072168231
-      plants free_18: -1417116490
-      plants free_23: -518513826
       plants free_0: -1691663871
-      plants free_17: 1197926415
-      plants free_19: 42082718
-      plants free_26: -1031277733
-      plants free_16: 1612681433
-      plants free_13: 1572858914
-      plants free_5: -448548389
-      plants free_10: 982331690
-      plants free_20: 681918311
       plants free_1: -16025009
-      plants free_15: -264393958
-      plants free_12: -462244608
-      plants free_6: 1047534646
-      plants free_24: -1417114163
-      plants free_4: -1277643040
-      plants free_22: -769681278
-      plants free_8: 70735381
-      plants free_3: -1355074150
-      plants free_7: -2089854456
-      plants free_27: -164474328
+      plants free_10: 982331690
       plants free_11: -689737900
-      plants free_25: -1846774322
-      plants free_2: 1067466068
-      plants free_9: 1996742637
+      plants free_12: -462244608
+      plants free_13: 1572858914
       plants free_14: -1642979176
-  spritePackingTag: 
+      plants free_15: -264393958
+      plants free_16: 1612681433
+      plants free_17: 1197926415
+      plants free_18: -1417116490
+      plants free_19: 42082718
+      plants free_2: 1067466068
+      plants free_20: 681918311
+      plants free_21: -2072168231
+      plants free_22: -769681278
+      plants free_23: -518513826
+      plants free_24: -1417114163
+      plants free_25: -1846774322
+      plants free_26: -1031277733
+      plants free_27: -164474328
+      plants free_3: -1355074150
+      plants free_4: -1277643040
+      plants free_5: -448548389
+      plants free_6: 1047534646
+      plants free_7: -2089854456
+      plants free_8: 70735381
+      plants free_9: 1996742637
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -116,8 +116,6 @@ public class Planter : MonoBehaviour
 
     public bool Plant(Vector2 position, FarmElement farmElement)
     {
-        
-
         //check if seeds are available
         if (_selectedPlantType != null && _availableSeeds.TryGetValue(_selectedPlantType, out int availableSeeds))
         {
@@ -162,10 +160,10 @@ public class Planter : MonoBehaviour
             if(_availableSeeds.ContainsKey(plantType))
             {
                 // add seeds to that plant
-                _availableSeeds[_selectedPlantType] += seeds;
+                _availableSeeds[plantType] += seeds;
 
                 // Update listeners
-                OnSeedsChanged(plantName, _availableSeeds[_selectedPlantType]);
+                OnSeedsChanged(plantName, _availableSeeds[plantType]);
 
             }
         }

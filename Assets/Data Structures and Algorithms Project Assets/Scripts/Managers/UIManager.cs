@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     [Header("Shop-SELL")]
     [SerializeField] private Transform _sellHarvestHolder;
     [SerializeField] private SellHarvestUIElement _sellHarvestUIElement;
+    private List<SellHarvestUIElement> _sellHarvestUIElementList = new();
 
     public static UIManager _instance { get; private set; }
 
@@ -64,8 +65,31 @@ public class UIManager : MonoBehaviour
 
     public void ShowTotalHarvest()
     {
+        // Clear harvest UI elements
+        foreach(var item in _sellHarvestUIElementList)
+        {
+            if(item != null && item.gameObject != null)
+            {
+                Destroy(item.gameObject);
+            }
+        }
+        _sellHarvestUIElementList.Clear();
+
         //Assignment 2
-        
+        foreach (var item in Harvester._instance.GetCollectedHarvest())
+        {
+            SellHarvestUIElement sellHarvestUIElement = Instantiate(_sellHarvestUIElement, _sellHarvestHolder);
+            sellHarvestUIElement.SetElement(
+                item,
+                item._name,
+                item._time,
+                Planter._instance.GetPlantResourseByName(item._name)._pricePerHarvest,
+                item._amount,
+                Planter._instance.GetPlantResourseByName(item._name)._harvestSprite
+            );
+
+            _sellHarvestUIElementList.Add(sellHarvestUIElement);
+        }
     }
 
     

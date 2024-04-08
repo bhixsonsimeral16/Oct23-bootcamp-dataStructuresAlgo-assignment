@@ -27,5 +27,13 @@ public class Shop : MonoBehaviour
 
     //Assignment 2
     // Get the harvest, add coins for the value, update UI and remove the item from the data structure
+    public void SellHarvest(CollectedHarvest collectedHarvest)
+    {
+        float pricePerHarvest = Planter._instance.GetPlantResourseByName(collectedHarvest._name)._pricePerHarvest;
+        _coins += pricePerHarvest * collectedHarvest._amount;
+        OnCoinsChanged(_coins);
+
+        Harvester._instance.RemoveHarvest(collectedHarvest);
+    }
 
 }
