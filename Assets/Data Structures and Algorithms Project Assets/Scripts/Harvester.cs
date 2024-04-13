@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Harvester : MonoBehaviour
 {
@@ -62,6 +63,47 @@ public class Harvester : MonoBehaviour
     public void SortHarvestByAmount()
     {
         // Sort the collected harvest using Quick sort
+        //_collectedHarvests.OrderByDescending(harvest => harvest._amount).ToList();
+
+        _collectedHarvests = QuickSort(_collectedHarvests, 0, _collectedHarvests.Count - 1);
+    }
+
+    //Assignment 3
+    private List<CollectedHarvest> QuickSort(List<CollectedHarvest> harvests, int low, int high)
+    {
+        var pivot = harvests[low];
+        var i = low;
+        var j = high;
+
+        while (i <= j)
+        {
+            // Sort in descending order
+            while(harvests[i]._amount > pivot._amount)
+            {
+                i++;
+            }
+            while(harvests[j]._amount < pivot._amount)
+            {
+                j--;
+            }
+
+            if(i <= j)
+            {
+                var temp = harvests[i];
+                harvests[i] = harvests[j];
+                harvests[j] = temp;
+                i++;
+                j--;
+            }
+        }
+
+        if(low < j)
+            QuickSort(harvests, low, j);
+
+        if(i < high)
+            QuickSort(harvests, i, high);
+
+        return harvests;
     }
 
 }
