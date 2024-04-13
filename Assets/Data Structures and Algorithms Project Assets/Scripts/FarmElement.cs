@@ -42,4 +42,13 @@ public class FarmElement : MonoBehaviour
 
         }
     }
+
+    public void OnHovered()
+    {
+        // Allow for click and drag for farm tiles
+        if(Input.GetMouseButton(0))
+        {
+            OnClicked();
+        }
+    }
 }

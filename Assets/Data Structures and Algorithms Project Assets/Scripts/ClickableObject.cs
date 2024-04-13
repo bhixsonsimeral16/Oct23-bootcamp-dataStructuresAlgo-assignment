@@ -37,6 +37,8 @@ public class ClickableObject : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerDown(PointerEventData eventData)
     {
         _renderer.color = _clickColor;
+        if(eventData.button == PointerEventData.InputButton.Left)
+            OnClicked?.Invoke();
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -46,11 +48,8 @@ public class ClickableObject : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData.button == PointerEventData.InputButton.Left)
-            OnClicked?.Invoke();
-        else if (eventData.button == PointerEventData.InputButton.Right)
+        if (eventData.button == PointerEventData.InputButton.Right)
             OnRightClicked?.Invoke();
-
     }
 
 
